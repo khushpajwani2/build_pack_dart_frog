@@ -44,14 +44,14 @@ build_pubspec() {
   #start pub from the /app folder to have correct symlink paths
   dart pub get  
   
-  dart pub global activate webdev
+  dart pub global activate dart_frog_cli
   if [ -d "web" ]
   then
-    message "*** Running webdev build"
+    message "*** Running dart_frog build"
     if [[ -z "$DART_BUILD_CMD" ]]
     then
-      message 'Building with "webdev build"'
-      webdev build
+      message 'Building with "dart_frog build"'
+      dart_frog build
     else
       message "Building with \"$DART_BUILD_CMD\""
       eval $DART_BUILD_CMD
